@@ -1,0 +1,31 @@
+{
+  "name": "my-siyte",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.0.9",
+    "@exfabrica/strapi-plugin-awesome-help": "^1.0.8",
+    "@strapi/plugin-i18n": "4.1.8",
+    "@strapi/plugin-users-permissions": "4.1.8",
+    "@strapi/strapi": "4.1.8",
+    "better-sqlite3": "7.4.6"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "be6de738-1d0a-4aaf-8491-57f25398e77b"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "on_a_hikes",
+  "info": {
+    "singularName": "on-a-hike",
+    "pluralName": "on-a-hikes",
+    "displayName": "on-a-hike",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 500
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "default": "Аnonym"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "on_a_hikes"
+    },
+    "textr": {
+      "type": "richtext",
+      "required": true
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

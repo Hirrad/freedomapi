@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "galerries",
+  "info": {
+    "singularName": "galerry",
+    "pluralName": "galerries",
+    "displayName": "galerry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 70
+    },
+    "background_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "author": {
+      "type": "string",
+      "required": false,
+      "maxLength": 70,
+      "default": "Аnonym"
+    }
+  }
+}
