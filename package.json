@@ -5,8 +5,8 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "NODE_ENV=production strapi start",
-    "build": "NODE_ENV=production strapi build",
+    "start": "NODE_ENVV strapi start",
+    "build": "NODE_ENVV strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "@exfabrica/strapi-plugin-awesome-help": "^1.0.8",
     "@strapi/plugin-i18n": "4.1.8",
     "@strapi/plugin-users-permissions": "4.1.8",
+    "@strapi/provider-upload-aws-s3": "^4.1.11",
     "@strapi/strapi": "4.1.8",
     "better-sqlite3": "7.4.6",
     "cross-env": "^7.0.3",
