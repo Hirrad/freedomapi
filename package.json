@@ -5,8 +5,8 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "NODE_ENVV=productionV1.1 strapi start",
-    "build": "NODE_ENVV=productionV1.1 strapi build",
+    "start": "strapi start",
+    "build": "strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
