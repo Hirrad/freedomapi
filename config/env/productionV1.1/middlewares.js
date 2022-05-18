@@ -1,34 +1,21 @@
 module.exports = ({ env }) => [
-  "strapi::errors",
-  "strapi::cors",
-  "strapi::poweredBy",
-  "strapi::logger",
-  "strapi::query",
-  "strapi::body",
-  "strapi::favicon",
-  "strapi::public",
+  'strapi::errors',
   {
-    name: "strapi::security",
+    name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
-        useDefaults: true,
         directives: {
-          "connect-src": ["'self'", "https:"],
-          "img-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            `${env("AWS_BUCKET")}}`,
-          ],
-          "media-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            `${env("AWS_BUCKET")}}`,
-          ],
-          upgradeInsecureRequests: null,
+          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
+          'img-src': ["'self'", 'data:', 'cdn.jsdelivr.net', 'strapi.io', `${env('AWS_BUCKET')}.s3.${env('AWS_REGION')}.amazonaws.com`],
         },
-      },
+      }
     },
   },
+  'strapi::cors',
+  'strapi::poweredBy',
+  'strapi::logger',
+  'strapi::query',
+  'strapi::body',
+  'strapi::favicon',
+  'strapi::public',
 ];
