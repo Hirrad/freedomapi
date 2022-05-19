@@ -33,7 +33,7 @@
       "target": "plugin::users-permissions.user",
       "inversedBy": "on_a_hikes"
     },
-    "textr": {
+    "text": {
       "type": "richtext",
       "required": true
     },
