@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog",
     "pluralName": "blogs",
-    "displayName": "blog"
+    "displayName": "blog",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -31,18 +32,24 @@
       "inversedBy": "blogs"
     },
     "background_image": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "author": {
       "type": "string",
       "maxLength": 50,
       "required": true,
       "default": "Аnonym"
+    },
+    "comment_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment-blog.comment-blog",
+      "mappedBy": "blog"
     }
   }
 }

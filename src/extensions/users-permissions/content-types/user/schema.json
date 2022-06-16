@@ -83,6 +83,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "comment_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment-blog.comment-blog",
+      "mappedBy": "author"
     }
   }
 }

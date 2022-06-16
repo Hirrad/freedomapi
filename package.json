@@ -10,17 +10,17 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@_sh/strapi-plugin-ckeditor": "^1.0.9",
+    "@_sh/strapi-plugin-ckeditor": "^1.1.0",
     "@exfabrica/strapi-plugin-awesome-help": "^1.0.8",
-    "@strapi/plugin-i18n": "^4.1.11",
-    "@strapi/plugin-users-permissions": "^4.1.11",
-    "@strapi/provider-upload-aws-s3": "^4.1.11",
-    "@strapi/strapi": "^4.1.11",
+    "@strapi/plugin-i18n": "^4.2.0",
+    "@strapi/plugin-users-permissions": "^4.2.0",
+    "@strapi/provider-upload-aws-s3": "^4.2.0",
+    "@strapi/strapi": "^4.2.0",
     "better-sqlite3": "7.4.6",
     "cross-env": "^7.0.3",
     "pg": "^8.7.3",
     "pg-connection-string": "^2.5.0",
-    "strapi-provider-upload-aws-s3-advanced": "^4.2.0",
+    "strapi-provider-upload-aws-s3-advanced": "^4.2.1",
     "strapi-provider-upload-ftp-v2": "^1.1.0"
   },
   "author": {
