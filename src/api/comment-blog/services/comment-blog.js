@@ -25,7 +25,9 @@ module.exports = createCoreService('api::comment-blog.comment-blog', ({ strapi }
     console.log(results)
     // some custom logic
     results.forEach(result => {
-      const { author: { id, username, confirmed, blocked, avatar: { formats: { thumbnail } } } } = result
+      const { author: { id, username, confirmed, blocked, avatar=null} } = result
+     const thumbnail=avatar?avatar.formats.thumbnail:''
+  
 
       // console.log(result)
       result.user = { id, username, confirmed, blocked, thumbnail };
@@ -33,6 +35,27 @@ module.exports = createCoreService('api::comment-blog.comment-blog', ({ strapi }
 
     return { results, pagination };
   },
+  async findOne(entityId, params) {
+    // Calling the default core controller
+    console.log('entityId',entityId)
+
+    const result = await super.findOne(entityId, {populate: ['author']});
+    
+
+    // console.log(results)
+    // some custom logic
+    // const { author: { id, username, confirmed, blocked, avatar=null } } = results
+    // const thumbnail=avatar?avatar.formats.thumbnail:''
+    
+      
+  
+
+      console.log('servise',result)
+      // results.user = { id, username, confirmed, blocked, thumbnail };
+    
+
+      return result;
+  }
 
   // Method 3: Replacing a core service
   // async findOne(entityId, params = {}) {
