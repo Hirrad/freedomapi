@@ -89,6 +89,12 @@
       "relation": "oneToMany",
       "target": "api::comment-blog.comment-blog",
       "mappedBy": "author"
+    },
+    "comment_on_a_hikes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment-on-a-hike.comment-on-a-hike",
+      "mappedBy": "author"
     }
   }
 }

@@ -21,12 +21,6 @@
       "type": "string",
       "required": true
     },
-    "author": {
-      "type": "string",
-      "required": true,
-      "maxLength": 50,
-      "default": "Аnonym"
-    },
     "users_permissions_user": {
       "type": "relation",
       "relation": "manyToOne",
@@ -44,6 +38,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "comment_on_a_hikes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment-on-a-hike.comment-on-a-hike",
+      "mappedBy": "on_a_hike"
     }
   }
 }

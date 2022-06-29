@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comment_on_a_hikes",
+  "info": {
+    "singularName": "comment-on-a-hike",
+    "pluralName": "comment-on-a-hikes",
+    "displayName": "Comment-on-a-hike"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "on_a_hike": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::on-a-hike.on-a-hike",
+      "inversedBy": "comment_on_a_hikes"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "comment_on_a_hikes"
+    }
+  }
+}

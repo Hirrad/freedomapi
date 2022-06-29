@@ -22,14 +22,14 @@ module.exports = createCoreService('api::comment-blog.comment-blog', ({ strapi }
   async find(...args) {
     // Calling the default core controller
     const { results, pagination } = await super.find(...args);
-    console.log(results)
+    // console.log(results)
     // some custom logic
     results.forEach(result => {
       const { author: { id, username, confirmed, blocked, avatar=null} } = result
      const thumbnail=avatar?avatar.formats.thumbnail:''
-  
+     console.log('id',id)
 
-      // console.log(result)
+      console.log(result)
       result.user = { id, username, confirmed, blocked, thumbnail };
     });
 
@@ -37,7 +37,7 @@ module.exports = createCoreService('api::comment-blog.comment-blog', ({ strapi }
   },
   async findOne(entityId, params) {
     // Calling the default core controller
-    console.log('entityId',entityId)
+    // console.log('entityId',entityId)
 
     const result = await super.findOne(entityId, {populate: ['author']});
     
@@ -50,7 +50,7 @@ module.exports = createCoreService('api::comment-blog.comment-blog', ({ strapi }
       
   
 
-      console.log('servise',result)
+      // console.log('servise',result)
       // results.user = { id, username, confirmed, blocked, thumbnail };
     
 
